@@ -39,12 +39,39 @@ module.exports=(app)=>{
     app.post('/insert',(req,res)=>{
         var handle=new db_handler.Request();
         console.log(req.body.name)
-        handle.query(`Insert into Admin (username,pwd) values ('${req.body.name}','123')`,(err)=>{
+        handle.query(`Insert into Admin (username,pwd) values ('${req.body.name}','${req.body.name}')`,(err)=>{
             if(err){
                 console.log(err);
                 res.status(500).send("NOT INSERTED");
             }else{
                 res.send("DONE..INSERTED")
+            }
+        })
+
+    })
+
+    app.post('/delete',(req,res)=>{
+        var handle=new db_handler.Request();
+        handle.query(`Delete from Admin where username='${req.body.name}'`,(err)=>{
+            if(err){
+                console.log(err);
+                res.status(500).send("NOT INSERTED");
+            }else{
+                res.send("DONE..deleted")
+            }
+        })
+
+    })
+
+    app.post('/update',(req,res)=>{
+        var handle=new db_handler.Request();
+        console.log(req.body.name)
+        handle.query(`Update Admin Set pwd= '${req.body.pwd}' where username='${req.body.name}'`,(err)=>{
+            if(err){
+                console.log(err);
+                res.status(500).send("NOT Updated");
+            }else{
+                res.send("DONE..Updated")
             }
         })
 

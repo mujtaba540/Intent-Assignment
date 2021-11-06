@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todo List</title>
+    <link href="/assests/styles.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+
+    <div id="todo-table">
+        <form method="POST" >
+            <input type="text" name="item" placeholder="Add new item" required>
+            <button type="submit" >Add</button>
+        </form>
+        <%= data.length%>
+        <ul>
+            
+            <% for(var i=0;i<data.length;i++) { %>
+                <li><%= data[i].item %></li>
+                <% } %>
+        </ul>
+    </div>
+    
+</body>
+</html>
