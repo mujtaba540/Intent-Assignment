@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="260dp" />
+            app:layout_constraintGuide_begin="397dp" />
 
         <TextView
             android:id="@+id/textView"
@@ -66,11 +66,11 @@
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <Button
-            android:id="@+id/dial"
+            android:id="@+id/repo"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="Phone"
+            android:text="Goto Repository"
             app:backgroundTint="#4CAF50"
             app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
             app:layout_constraintHorizontal_bias="0.0"
@@ -115,8 +115,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-            app:layout_constraintTop_toBottomOf="@+id/dial"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/repo"
             app:srcCompat="@drawable/repo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
